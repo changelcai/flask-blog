@@ -80,8 +80,8 @@ class User:
     @staticmethod
     def get_gravatar_link(email=''):
         gravatar_url = "http://www.gravatar.com/avatar/" + \
-            hashlib.md5(email.lower()).hexdigest() + "?"
-        gravatar_url += urllib.urlencode({'d': 'retro'})
+            hashlib.md5(email.lower().encode('utf-8')).hexdigest() + "?"
+        gravatar_url += urllib.parse.urlencode({'d': 'retro'})
         return gravatar_url
 
     def delete_user(self, user_id):
