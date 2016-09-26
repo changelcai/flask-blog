@@ -115,6 +115,6 @@ class Settings:
                      'details': str(msg)}
 
             print (error_color)
-            print ('\n\n---\nError type: %s in file: %s on line: %s\nError details: %s\n---\n\n')\
-                  % (error['type'], error['file'], error['line'], error['details'])
+            print ('\n\n---\nError type: %s in file: %s on line: %s\nError details: %s\n---\n\n'\
+                  % (error['type'], error['file'], error['line'], error['details']))
             print (error_end)

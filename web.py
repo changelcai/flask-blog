@@ -104,11 +104,9 @@ def new_post():
             post = postClass.validate_post_data(post_data)
             if request.form.get('post-preview') == '1':
                 session['post-preview'] = post
-                session[
-                    'post-preview']['action'] = 'edit' if request.form.get('post-id') else 'add'
+                session['post-preview']['action'] = 'edit' if request.form.get('post-id') else 'add'
                 if request.form.get('post-id'):
-                    session[
-                        'post-preview']['redirect'] = url_for('post_edit', id=request.form.get('post-id'))
+                    session['post-preview']['redirect'] = url_for('post_edit', id=request.form.get('post-id'))
                 else:
                     session['post-preview']['redirect'] = url_for('new_post')
                 return redirect(url_for('post_preview'))
@@ -305,8 +303,7 @@ def recent_feed():
         feed.add(post['title'], md(post_entry),
                  content_type='html',
                  author=post['author'],
-                 url=make_external(
-                     url_for('single_post', permalink=post['permalink'])),
+                 url=make_external(url_for('single_post', permalink=post['permalink'])),
                  updated=post['date'])
     return feed.get_response()
 

@@ -33,8 +33,7 @@ class User:
             self.print_debug_info(e, self.debug_mode)
             self.response['error'] = 'System error..'
 
-        self.response['data'] = {'username':
-                                 self.username, 'email': self.email}
+        self.response['data'] = {'username':self.username, 'email': self.email}
         return self.response
 
     @staticmethod
