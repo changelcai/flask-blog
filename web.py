@@ -216,7 +216,7 @@ def login():
         if session.get('user'):
             return redirect(url_for('posts'))
 
-    return render_template('login.html',
+    return render_template('login_profile.html',
                            meta_title='Login',
                            error=error,
                            error_type=error_type)

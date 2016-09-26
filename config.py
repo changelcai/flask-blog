@@ -1,7 +1,8 @@
 import pymongo
 import os
 
-CONNECTION_STRING = "mongodb://120.26.220.114"  # replace it with your settings
+# CONNECTION_STRING = "mongodb://120.26.220.114"  # replace it with your settings
+CONNECTION_STRING = "mongodb://localhost"  # replace it with your settings
 CONNECTION = pymongo.MongoClient(CONNECTION_STRING)
 
 '''Leave this as is if you dont have other configuration'''
