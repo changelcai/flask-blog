@@ -198,8 +198,9 @@ def login():
     error = False
     error_type = 'validate'
     if request.method == 'POST':
-        username = request.form.get('login-username')
-        password = request.form.get('login-password')
+        username = request.form.get('username')
+        password = request.form.get('password')
+        print(username,password)
         if not username or not password:
             error = True
         else:
